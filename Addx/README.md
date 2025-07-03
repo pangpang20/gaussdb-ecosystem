@@ -9,6 +9,7 @@ ___
 Addax 是一个异构数据源离线同步工具，致力于实现包括关系型数据库(GaussDB、MySQL、Oracle 等)、HDFS、Hive、HBase、FTP 等各种异构数据源之间稳定高效的数据同步功能。  
 GaussDBReader插件实现了从GaussDB读取数据。在底层实现上，GaussDBReader通过JDBC连接远程GaussDB数据库，并执行相应的sql语句将数据从GaussDB库中SELECT出来。  
 GaussDBWriter插件实现了写入数据到 GaussDB主库目的表的功能。在底层实现上，GaussDBWriter通过JDBC连接远程 GaussDB 数据库，并执行相应的 insert into ... sql 语句将数据写入 GaussDB，内部会分批次提交入库。 GaussDBWriter面向ETL开发工程师，他们使用GaussDBWriter从数仓导入数据到GaussDB。同时 GaussDBWriter亦可以作为数据迁移工具为DBA等用户提供服务。
+* 参考文档: https://wgzhao.github.io/Addax/latest/quickstart/   <br />
 
 ## 2 实现原理
 
@@ -49,8 +50,6 @@ mvn clean package
 mvn package assembly:single
 cd target/addax/addax-<version>
 ```
-
-* 参考文档: https://wgzhao.github.io/Addax/latest/quickstart/   <br />
 
 ## 4 案例分享
 *  本案例实现场景为 从GaussDB的一张源表抽取数据写入到另外一张不同库的GaussDB目标表。          
