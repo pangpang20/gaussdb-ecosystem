@@ -37,7 +37,7 @@ GaussDBWriter通过 Addax 框架获取 Reader 生成的协议数据，根据你�
         "content": [
             {
                 "reader": {
-                    "name": "GaussDBreader",
+                    "name": "gaussdbreader",
                     "parameter": {
                         "username": "xx",
                         "password": "xxxx",
@@ -45,10 +45,10 @@ GaussDBWriter通过 Addax 框架获取 Reader 生成的协议数据，根据你�
                         "connection": [
                             {
                                 "querySql": [
-                                    "select db_id,on_line_flag from schema.table_name where db_id < 10;"
+                                    "select id,name,comment from schema.table_name where id < 10;"
                                 ],
                                 "jdbcUrl": [
-                                    "jdbc:GaussDB://host:port/database", "jdbc:GaussDB://host:port/database"
+                                    "jdbc:GaussDB://host:port/database"
                                 ]
                             }
                         ]
@@ -57,19 +57,18 @@ GaussDBWriter通过 Addax 框架获取 Reader 生成的协议数据，根据你�
 				"writer": {
 					"name": "gaussdbwriter",
 					"parameter": {
-						"column": ["*"],
+						"username": "xx",
+						"password": "xxxx",
+						"preSql": ["truncate table schema.table_name"],						
 						"connection": [
 							{
-								"jdbcUrl": "jdbc:gaussdb://host:port/database"
-							,
+								"jdbcUrl": "jdbc:gaussdb://host:port/database",
 								"table": [
 									"schema.table_name"
 								]
 							}
 						],
-						"username": "xx",
-						"password": "xxxx",
-						"preSql": ["truncate table schema.table_name"],
+						"column": ["id","name","comment"],
 						"postSql": []
 					}
 				}
