@@ -42,11 +42,13 @@ docker run -it --rm quay.io/wgzhao/addax:latest /opt/addax/bin/addax.sh /opt/add
 ### 3.3 源代码编译安装(推荐)
 * 你可以选择从源代码编译安装，基本操作如下：
 
+```shell
 git clone https://github.com/wgzhao/addax.git
 cd addax
 mvn clean package
 mvn package assembly:single
-cd target/addax/addax-<version>   <br />
+cd target/addax/addax-<version>
+```
 
 * 参考文档: https://wgzhao.github.io/Addax/latest/quickstart/   <br />
 
