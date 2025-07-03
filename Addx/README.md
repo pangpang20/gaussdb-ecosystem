@@ -48,7 +48,7 @@ GaussDBWriter通过 Addax 框架获取 Reader 生成的协议数据，根据你�
                                     "select id,name,comment from schema.table_name where id < 10;"
                                 ],
                                 "jdbcUrl": [
-                                    "jdbc:GaussDB://host:port/database"
+                                    "jdbc:gaussdb://host:port/database"
                                 ]
                             }
                         ]
