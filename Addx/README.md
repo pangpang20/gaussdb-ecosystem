@@ -197,3 +197,262 @@ GaussDBWriter通过 Addax 框架获取 Reader 生成的协议数据，根据你�
 请注意:
 
 * `除上述罗列字段类型外，其他类型均不支持; money,inet,bit需用户使用a_inet::varchar类似的语法转换`。
+
+
+## 4 案例分享
+
+*  本案例实现场景为 从GaussDB的一张源表抽取数据写入到另外一张不同库的GaussDB目标表。        
+配置如下: 
+- OS  Huawei Cloud EulerOS 2.0  aarch64
+- JDK 17 
+- Python 3.3.9 
+- Apache Maven 3.9.10
+
+### 使用一键安装脚本(非必须)
+
+```shell
+/bin/bash -c "$(curl -fsSL https://github.com/Tyhoning/Addax/blob/master/install.sh)"
+```
+上述脚本会将 Addax 安装到预设的目录(`/opt/addax`)
+
+### 编译及打包
+
+目前编译需要 JDK 17+ 版本
+
+```shell
+git clone https://github.com/Tyhoning/Addax.git addax
+cd addax
+export MAVEN_OPTS="-DskipTests -Dmaven.javadoc.skip=true -Dmaven.source.skip=true -Dgpg.skip=true"
+mvn clean package 
+mvn package -Pdistribution
+```
+
+编译打包成功后，会在项目目录的`target` 目录下创建一个 `addax-<version>`的 文件夹，其中 `<version>` 表示版本。
+
+### 冒烟测试
+
+`job` 子目录包含了大量的任务样本，其中 `job.json` 可以作为冒烟测试
+
+```shell
+python bin/addax.py job/job.json
+```
+上述命令的输出大致如下：
+<details>
+<summary>点击展开</summary>
+
+```shell
+[root@hadoop2 addax-6.0.2-SNAPSHOT]# bin/addax.py job/job.json
+/usr/bin/env: ‘python\r’: No such file or directory
+/usr/bin/env: use -[v]S to pass options in shebang lines
+[root@hadoop2 addax-6.0.2-SNAPSHOT]# python bin/addax.py job/job.json
+==================== DEPRECATED WARNING ========================
+addax.py is deprecated, It's going to be removed in future release.
+As a replacement, you can use addax.sh to run job
+==================== DEPRECATED WARNING ========================
+
+2025-07-03 19:52:03.225 [        main] INFO  Engine               - 
+  ___      _     _            
+ / _ \    | |   | |           
+/ /_\ \ __| | __| | __ ___  __
+|  _  |/ _` |/ _` |/ _` \ \/ /
+| | | | (_| | (_| | (_| |>  < 
+\_| |_/\__,_|\__,_|\__,_/_/\_\
+:: Addax version ::    (v6.0.2-SNAPSHOT)
+2025-07-03 19:52:03.386 [        main] INFO  Engine               - 
+{
+	"setting":{
+		"speed":{
+			"byte":-1,
+			"channel":1
+		},
+		"errorLimit":{
+			"record":0,
+			"percentage":0.02
+		}
+	},
+	"content":{
+		"reader":{
+			"name":"streamreader",
+			"parameter":{
+				"column":[
+					{
+						"value":"addax",
+						"type":"string"
+					},
+					{
+						"value":19890604,
+						"type":"long"
+					},
+					{
+						"value":"1989-06-04 00:00:00",
+						"type":"date"
+					},
+					{
+						"value":true,
+						"type":"bool"
+					},
+					{
+						"value":"test",
+						"type":"bytes"
+					}
+				],
+				"sliceRecordCount":10
+			}
+		},
+		"writer":{
+			"name":"streamwriter",
+			"parameter":{
+				"print":true,
+				"column":[
+					"col1"
+				],
+				"encoding":"UTF-8"
+			}
+		}
+	}
+}
+
+2025-07-03 19:52:03.410 [        main] INFO  JobContainer         - The jobContainer begins to process the job.
+2025-07-03 19:52:03.418 [       job-0] INFO  JobContainer         - The Reader.Job [streamreader] perform prepare work .
+2025-07-03 19:52:03.418 [       job-0] INFO  JobContainer         - The Writer.Job [streamwriter] perform prepare work .
+2025-07-03 19:52:03.418 [       job-0] INFO  JobContainer         - Job set Channel-Number to 1 channel(s).
+2025-07-03 19:52:03.419 [       job-0] INFO  JobContainer         - The Reader.Job [streamreader] is divided into [1] task(s).
+2025-07-03 19:52:03.419 [       job-0] INFO  JobContainer         - The Writer.Job [streamwriter] is divided into [1] task(s).
+2025-07-03 19:52:03.438 [       job-0] INFO  JobContainer         - The Scheduler launches [1] taskGroup(s).
+2025-07-03 19:52:03.444 [ taskGroup-0] INFO  TaskGroupContainer   - The taskGroupId=[0] started [1] channels for [1] tasks.
+2025-07-03 19:52:03.446 [ taskGroup-0] INFO  Channel              - The Channel set byte_speed_limit to -1, No bps activated.
+2025-07-03 19:52:03.447 [ taskGroup-0] INFO  Channel              - The Channel set record_speed_limit to -1, No tps activated.
+addax	19890604	1989-06-04 00:00:00	true	test
+addax	19890604	1989-06-04 00:00:00	true	test
+addax	19890604	1989-06-04 00:00:00	true	test
+addax	19890604	1989-06-04 00:00:00	true	test
+addax	19890604	1989-06-04 00:00:00	true	test
+addax	19890604	1989-06-04 00:00:00	true	test
+addax	19890604	1989-06-04 00:00:00	true	test
+addax	19890604	1989-06-04 00:00:00	true	test
+addax	19890604	1989-06-04 00:00:00	true	test
+addax	19890604	1989-06-04 00:00:00	true	test
+2025-07-03 19:52:06.450 [       job-0] INFO  AbstractScheduler    - The scheduler has completed all tasks.
+2025-07-03 19:52:06.450 [       job-0] INFO  JobContainer         - The Writer.Job [streamwriter] perform post work.
+2025-07-03 19:52:06.451 [       job-0] INFO  JobContainer         - The Reader.Job [streamreader] perform post work.
+2025-07-03 19:52:06.455 [       job-0] INFO  StandAloneJobContainerCommunicator - Total 10 records, 260 bytes | Speed 86B/s, 3 records/s | Error 0 records, 0 bytes |  All Task WaitWriterTime 0.000s |  All Task WaitReaderTime 0.000s | Percentage 100.00%
+2025-07-03 19:52:06.456 [       job-0] INFO  JobContainer         - 
+Job start  at             : 2025-07-03 19:52:03
+Job end    at             : 2025-07-03 19:52:06
+Job took secs             :                  3s
+Average   bps             :               86B/s
+Average   rps             :              3rec/s
+Number of rec             :                  10
+Failed record             :                   0
+
+```
+</details>
+
+### 案例任务
+
+```shell
+python bin/addax.py job/gaussdb2gaussdb.json
+```
+上述命令的输出大致如下：
+<details>
+<summary>点击展开</summary>
+
+```shell
+[root@hadoop2 addax-6.0.2-SNAPSHOT]# python ./bin/addax.py ./job/gaussdb2gaussdb.json
+==================== DEPRECATED WARNING ========================
+addax.py is deprecated, It's going to be removed in future release.
+As a replacement, you can use addax.sh to run job
+==================== DEPRECATED WARNING ========================
+
+2025-07-03 19:58:20.910 [        main] INFO  Engine               - 
+  ___      _     _            
+ / _ \    | |   | |           
+/ /_\ \ __| | __| | __ ___  __
+|  _  |/ _` |/ _` |/ _` \ \/ /
+| | | | (_| | (_| | (_| |>  < 
+\_| |_/\__,_|\__,_|\__,_/_/\_\
+:: Addax version ::    (v6.0.2-SNAPSHOT)
+2025-07-03 19:58:21.070 [        main] INFO  Engine               - 
+{
+	"content":{
+		"reader":{
+			"name":"gaussdbreader",
+			"parameter":{
+				"username":"******",
+				"password":"******",
+				"column":[
+					"player_id",
+					"team_id",
+					"player_name",
+					"height",
+					"substring(current_timestamp,1,23)"
+				],
+				"connection":{
+					"jdbcUrl":"jdbc:gaussdb://*.*.*.*:8000/bigdata",
+					"table":[
+						"players.addax_src1"
+					]
+				}
+			}
+		},
+		"writer":{
+			"name":"gaussdbwriter",
+			"parameter":{
+				"column":[
+					"*"
+				],
+				"connection":{
+					"jdbcUrl":"jdbc:gaussdb://*.*.*.*:8000/metastore",
+					"table":[
+						"players.addax_dst1"
+					]
+				},
+				"username":"******",
+				"password":"******",
+				"preSql":[
+					"truncate table players.addax_dst1"
+				],
+				"postSql":[]
+			}
+		}
+	},
+	"setting":{
+		"speed":{
+			"bytes":-1,
+			"channel":1
+		}
+	}
+}
+
+2025-07-03 19:58:21.093 [        main] INFO  JobContainer         - The jobContainer begins to process the job.
+2025-07-03 19:58:22.484 [       job-0] INFO  OriginalConfPretreatmentUtil - The table [players.addax_src1] has columns [player_id,team_id,player_name,height,update_time].
+2025-07-03 19:58:23.198 [       job-0] INFO  OriginalConfPretreatmentUtil - The table [players.addax_dst1] has columns [player_id,team_id,player_name,height,update_time].
+2025-07-03 19:58:23.198 [       job-0] WARN  OriginalConfPretreatmentUtil - There are some risks in the column configuration. Because you did not configure the columns to read the database table, changes in the number and types of fields in your table may affect the correctness of the task or even cause errors.
+2025-07-03 19:58:23.200 [       job-0] INFO  OriginalConfPretreatmentUtil - Writing data using [INSERT INTO %s ( player_id,team_id,player_name,height,update_time) VALUES ( ?,?,?,?,? )].
+2025-07-03 19:58:23.200 [       job-0] INFO  JobContainer         - The Reader.Job [gaussdbreader] perform prepare work .
+2025-07-03 19:58:23.200 [       job-0] INFO  JobContainer         - The Writer.Job [gaussdbwriter] perform prepare work .
+2025-07-03 19:58:23.726 [       job-0] INFO  CommonRdbmsWriter$Job - Begin to execute preSqls:[truncate table players.addax_dst1]. context info:jdbc:gaussdb://*.*.*.*:8000/metastore.
+2025-07-03 19:58:23.759 [       job-0] INFO  JobContainer         - Job set Channel-Number to 1 channel(s).
+2025-07-03 19:58:23.761 [       job-0] INFO  JobContainer         - The Reader.Job [gaussdbreader] is divided into [1] task(s).
+2025-07-03 19:58:23.761 [       job-0] INFO  JobContainer         - The Writer.Job [gaussdbwriter] is divided into [1] task(s).
+2025-07-03 19:58:23.777 [       job-0] INFO  JobContainer         - The Scheduler launches [1] taskGroup(s).
+2025-07-03 19:58:23.785 [ taskGroup-0] INFO  TaskGroupContainer   - The taskGroupId=[0] started [1] channels for [1] tasks.
+2025-07-03 19:58:23.787 [ taskGroup-0] INFO  Channel              - The Channel set byte_speed_limit to -1, No bps activated.
+2025-07-03 19:58:23.787 [ taskGroup-0] INFO  Channel              - The Channel set record_speed_limit to -1, No tps activated.
+2025-07-03 19:58:23.794 [  reader-0-0] INFO  CommonRdbmsReader$Task - Begin reading records by executing SQL query: [SELECT player_id,team_id,player_name,height,substring(current_timestamp,1,23) FROM players.addax_src1 ].
+2025-07-03 19:58:24.973 [  reader-0-0] INFO  CommonRdbmsReader$Task - Finished reading records by executing SQL query: [SELECT player_id,team_id,player_name,height,substring(current_timestamp,1,23) FROM players.addax_src1 ].
+2025-07-03 19:58:26.789 [       job-0] INFO  AbstractScheduler    - The scheduler has completed all tasks.
+2025-07-03 19:58:26.790 [       job-0] INFO  JobContainer         - The Writer.Job [gaussdbwriter] perform post work.
+2025-07-03 19:58:26.790 [       job-0] INFO  JobContainer         - The Reader.Job [gaussdbreader] perform post work.
+2025-07-03 19:58:26.794 [       job-0] INFO  StandAloneJobContainerCommunicator - Total 9 records, 337 bytes | Speed 112B/s, 3 records/s | Error 0 records, 0 bytes |  All Task WaitWriterTime 0.000s |  All Task WaitReaderTime 0.000s | Percentage 100.00%
+2025-07-03 19:58:26.795 [       job-0] INFO  JobContainer         - 
+Job start  at             : 2025-07-03 19:58:21
+Job end    at             : 2025-07-03 19:58:26
+Job took secs             :                  5s
+Average   bps             :              112B/s
+Average   rps             :              3rec/s
+Number of rec             :                   9
+Failed record             :                   0
+
+```
+</details>
