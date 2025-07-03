@@ -18,7 +18,7 @@ GaussDBWriter插件实现了写入数据到 GaussDB主库目的表的功能。�
 GaussDBWriter通过 Addax 框架获取 Reader 生成的协议数据，根据你配置生成相应的SQL插入语句  
 * `insert into...`(当主键/唯一性索引冲突时会写不进去冲突的行)
 <br />  
-    注意：
+    注意：  <br />
   		1. 目的表所在数据库必须是主库才能写入数据；整个任务至少需具备 insert into...的权限，是否需要其他权限，取决于你任务配置中在 preSql 和 postSql 中指定的语句。  <br />
       	2. GaussDBWriter和MysqlWriter不同，不支持配置writeMode参数。  
 
