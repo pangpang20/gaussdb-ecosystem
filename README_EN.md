@@ -1,0 +1,65 @@
+<p align="center">
+  <p align="center">
+    <a href="README.md"><strong>简体中文</strong></a> | <strong>English</strong>
+  </p>
+This project aggregates comprehensive information about the GaussDB open-source ecosystem, including supported open-source software, version compatibility, and usage guidelines.
+
+> ***If you find this project helpful, don't forget to click the `star` in the top-right corner to show your support!***
+
+> ***Help Provide Information: If you encounter open-source software incompatible with GaussDB, please [submit an ISSUE](https://github.com/HuaweiCloudDeveloper/gaussdb-ecosystem/issues). You need to provide the open-source software name, version used, issue descriptions, and other relevant information; we will improve the support for related open-source software based on your input.***
+
+# GaussDB Open-Source Ecosystem
+
+| Category | Subcategory    | Open-Source</br>Software   | Base</br>Version | GaussDB</br>Version  | Driver</br>Version  | Usage</br>Guide                                  |
+|:------|:------|:----------------------|:----------| :------------ |:-----------|:-------------------------------------------|
+| ORM Frameworks | Java   | MyBatis               | 3.5.14    |  505.2.0  | 506.0.0    | [Usage Guide](./MyBatis/3.5.x/README.md)          |
+| ORM Frameworks | Java   | MyBatis-Plus          | 3.5.12    |  505.2.0  | 506.0.0    | [Usage Guide](./MyBatis-Plus/3.5.x/README.md)     |
+| ORM Frameworks | Java   | MyBatis-PageHelper    |           |  |            |                                            |
+| ORM Frameworks | Java   | Spring JDBC           | 6.1.10    |  505.2.0  | 506.0.0    | [Usage Guide](./SpringJDBC/6.1.x/README.md)       |
+| ORM Frameworks | Java   | Spring R2DBC          | 6.1.10    |  505.2.0  | 1.0.0.RC1  | [Usage Guide](./SpringR2DBC/6.1.x/README.md)      |
+| ORM Frameworks | Java   | Spring Data JPA       | 3.4.5     |  505.2.0  | 506.0.0    | [Usage Guide](./SpringDataJPA/3.4.x/README.md)    |
+| ORM Frameworks | Java   | Spring Data JPA       | 3.3.12    |  505.2.0  | 506.0.0    | [Usage Guide](./SpringDataJPA/3.3.x/README.md)    |
+| ORM Frameworks | Java   | Hibernate             | 7.0.0     |  505.2.0  | 506.0.0    | [Usage Guide](./Hibernate/7.0.x/README.md)        |
+| ORM Frameworks | Java   | Hibernate             | 6.6.15    |  505.2.0  | 506.0.0    | [Usage Guide](./Hibernate/6.6.x/README.md)        |
+| ORM Frameworks | Java   | Spring Data JDBC      | 3.5.1 |  505.2.0  | 506.0.0    | [Usage Guide](./SpringDataJDBC/3.5.x/README.md)   |
+| ORM Frameworks | Java   | Spring Data JDBC      | 3.4.5 |  505.2.0  | 506.0.0    | [Usage Guide](./SpringDataJDBC/3.4.x/README.md)   |
+| ORM Frameworks | Java   | Spring Data R2DBC     | 3.5.1 |  505.2.0  | 1.0.0.RC1  | [Usage Guide](./SpringDataR2DBC/3.5.x/README.md)  |
+| ORM Frameworks | Java   | Spring Data R2DBC     | 3.4.5 |  505.2.0  | 1.0.0.RC1  | [Usage Guide](./SpringDataR2DBC/3.4.x/README.md)  |
+| ORM Frameworks | Go   | GORM     | v1.30.0   |  505.2.0  | v1.0.0-rc1 | [Usage Guide](./GORM/v1.30.0/README.md)           |
+| ORM Frameworks | Go   | Ent     |           |    |            |                                            |
+| ORM Frameworks | .Net   | Entity Framework Core     |           |    |            |                                            |
+| ORM Frameworks | .Net   | Nhibernate     |           |    |            |                                            |
+| ORM Frameworks | Rust   | Diesel     |           |    |            |                                            |
+| ORM Frameworks | Rust   | SeaORM     |           |    |            |                                            |
+| ORM Frameworks | Python   | SQLAlchemy     |           |    |            |                                            |
+| ORM Frameworks | Python   | Django ORM     |           |    |            |                                            |
+| ORM Frameworks | NodeJS   | Sequelize     |           |    |            |                                            |
+| ORM Frameworks | NodeJS   | TypeORM     |           |    |            |                                            |
+| ORM Frameworks | PHP   | Laravel(Eloquent)     |           |    |            |                                            |
+| ORM Frameworks | PHP   | CakePHP     |           |    |            |                                            |
+| Development Frameworks | Connection Pools   | HikariCP              | 5.1.0     | 505.2.0  | 506.0.0    | [Usage Guide](./HikariCP/5.1.x/README.md)         |
+| Development Frameworks | Connection Pools   | Druid                 | 1.2.23    | 505.2.0  | 506.0.0    | [Usage Guide](./Druid/1.2.x/README.md)            |
+| Development Frameworks | Scheduled Jobs | Quartz            |  2.5.0    | 505.2.0  |    506.0.0  | [Usage Guide](./Quartz/2.5.0/README.md)      |
+| Database Tools | Clients | DBeaver               |           | 505.2.0  | 506.0.0    | [Usage Guide](./DBeaver/25.0.x/README.md)         |
+| Database Tools | Monitoring & Operations | Apache SkyWalking               |           |  |            |                                            |
+| Database Tools | ETL | Addx              |           |  |            |                                            |
+| Database Tools | ETL | Apache Camel              |           |  |            |                                            |
+| Database Tools | ETL | Kettle              |           |  |            |                                            |
+| Database Tools | ETL | Airflow              |           |  |            |                                            |
+| Database Tools | ETL | Flink(JDBC Connector) | 3.3.0     | 505.2.0  | 506.0.0    | [Usage Guide](FlinkConnectorJDBC/3.3.x/README.md) |
+| Database Tools | ETL | Flink(JDBC Connector) | 4.0.0     | 505.2.0  | 506.0.0    | [Usage Guide](FlinkConnectorJDBC/4.0.x/README.md) |
+| Database Tools | ETL | Flink(CDC)            |           | 505.2.0  | 506.0.0    |                                            |
+| Middleware | Distributed Tasks | XXL-Job            |           | 505.2.0  | 506.0.0    |                                            |
+| Middleware | Distributed Tasks | DolphinScheduler           |           | 505.2.0  | 506.0.0    |                                            |
+| Middleware | Distributed Tasks | ElasticJob           |           | 505.2.0  | 506.0.0    |                                            |
+| Middleware | Configuration Registries | Nacos            |           | 505.2.0  | 506.0.0    |                                            |
+| Middleware | Configuration Registries | Apollo            |           | 505.2.0  | 506.0.0    |                                            |
+| Middleware | Metadata Management | OpenMetadata            |           | 505.2.0  | 506.0.0    |                                            |
+
+* Use `select version()` to check your GaussDB version.  
+* Refer to [gaussdb-drivers](https://github.com/HuaweiCloudDeveloper/gaussdb-drivers) for driver details.  
+* Generally:  
+  - Version `3.5.14` is compatible with **any `3.5.x`** release  
+  - For `3.6.x` versions, **additional validation** is required  
+  - **Not recommended** for legacy versions like `3.4.x`  
+* We're gradually expanding version coverage - stay tuned! 
