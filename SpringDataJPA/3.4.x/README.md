@@ -67,7 +67,7 @@ Spring Data JPA默认依赖Hibernate，本例子使用了Hibernate 7.0.0.Final�
       <dependency>
         <groupId>com.huaweicloud.gaussdb</groupId>
         <artifactId>gaussdb-hibernate-dialect</artifactId>
-        <version>7.0.0</version>
+        <version>7.0.1</version>
         <scope>compile</scope>
       </dependency>
     ```

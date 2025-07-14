@@ -50,7 +50,7 @@ PRIMARY KEY (player_id)
 ```
 
 2. flink sql 使用场景
-*  做源表 
+*  做源表   <br />
    场景介绍: Flink sql 读取gaussdb players数据后将数据写入printsink表  <br />
 
 ```flink sql
@@ -80,10 +80,11 @@ update_time timestamp
 
 insert into printsink select * from source;
 ```
-- 执行成功：[做源表](./docs/image/scenario01.png)
+**执行成功：**  <br />
+![img.png](docs/image/scenario01.png)
 
 
-*  做结果表
+*  做结果表  <br />
    场景介绍: Flink sql 读取gaussdb players_source表的数据后将数据写入gaussdb players表  <br />
 
 ```flink sql
@@ -117,11 +118,13 @@ PRIMARY KEY (player_id) NOT ENFORCED
 
 insert into sink  select * from source;
 ```
-- 执行成功：[做结果表](./docs/image/scenario02.png)
+**执行成功：** <br />
+![img.png](docs/image/scenario02.png)
 
 
-*  做维表
+*  做维表  <br />
    场景介绍:  Flink sql 读取gaussdb players_info表数据并join gaussdb维表 players后 将数据写入players_detail 结果表 <br />
+
 ```flink sql
 CREATE TABLE players (
 player_id INT,
@@ -168,7 +171,8 @@ insert into players_detail
 select ps.player_id, ps.player_name, pi.phone ,pi.address ,pi.email ,pi.update_time from players_info  as pi
 inner join  players  as ps  on  ps.player_id = pi.player_id ;
 ```
-- 执行成功：[做维表](./docs/image/scenario03.png)
+**执行成功：** <br />
+![img.png](docs/image/scenario03.png)
 
 
 **注意事项:**
