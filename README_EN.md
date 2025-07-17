@@ -12,7 +12,7 @@ This project aggregates comprehensive information about the GaussDB open-source 
 
 | Category | Subcategory    | Open-Source</br>Software   | Base</br>Version | GaussDB</br>Version  | Driver</br>Version  | Usage</br>Guide                                  |
 |:------|:------|:----------------------|:----------| :------------ |:-----------|:-------------------------------------------|
-| ORM Frameworks | Java   | MyBatis               | 3.5.14    |  505.2.0  | 506.0.0    | [Usage Guide](./MyBatis/3.5.x/README.md)          |
+| ORM Frameworks | Java   | MyBatis               | 3.5.14    |  505.2.0  | 506.0.0    | [Usage Guide](./MyBatis/3.5.x/README_en.md)          |
 | ORM Frameworks | Java   | MyBatis-Plus          | 3.5.12    |  505.2.0  | 506.0.0    | [Usage Guide](./MyBatis-Plus/3.5.x/README.md)     |
 | ORM Frameworks | Java   | MyBatis-PageHelper    |           |  |            |                                            |
 | ORM Frameworks | Java   | Spring JDBC           | 6.1.10    |  505.2.0  | 506.0.0    | [Usage Guide](./SpringJDBC/6.1.x/README.md)       |
