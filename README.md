@@ -1,6 +1,6 @@
 <p align="center">
   <p align="center">
-    <a href="README_EN.md"><strong>English</strong></a> | <strong>简体中文</strong>
+    <a href="README_en.md"><strong>English</strong></a> | <strong>简体中文</strong>
   </p>
 本项目收集GaussDB开源软件生态的总体信息，包括支持的开源软件、版本以及使用指南等。
 
