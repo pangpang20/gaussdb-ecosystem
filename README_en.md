@@ -1,7 +1,8 @@
 <p align="center">
   <p align="center">
     <a href="README.md"><strong>简体中文</strong></a> | <strong>English</strong>
-  </p>
+</p>
+
 This project aggregates comprehensive information about the GaussDB open-source ecosystem, including supported open-source software, version compatibility, and usage guidelines.
 
 > ***If you find this project helpful, don't forget to click the `star` in the top-right corner to show your support!***
@@ -13,7 +14,7 @@ This project aggregates comprehensive information about the GaussDB open-source 
 | Category | Subcategory    | Open-Source</br>Software   | Base</br>Version | GaussDB</br>Version  | Driver</br>Version  | Usage</br>Guide                                  |
 |:------|:------|:----------------------|:----------| :------------ |:-----------|:-------------------------------------------|
 | ORM Frameworks | Java   | MyBatis               | 3.5.14    |  505.2.0  | 506.0.0    | [Usage Guide](./MyBatis/3.5.x/README_en.md)          |
-| ORM Frameworks | Java   | MyBatis-Plus          | 3.5.12    |  505.2.0  | 506.0.0    | [Usage Guide](./MyBatis-Plus/3.5.x/README.md)     |
+| ORM Frameworks | Java   | MyBatis-Plus          | 3.5.12    |  505.2.0  | 506.0.0    | [Usage Guide](./MyBatis-Plus/3.5.x/README_en.md)     |
 | ORM Frameworks | Java   | MyBatis-PageHelper    |           |  |            |                                            |
 | ORM Frameworks | Java   | Spring JDBC           | 6.1.10    |  505.2.0  | 506.0.0    | [Usage Guide](./SpringJDBC/6.1.x/README.md)       |
 | ORM Frameworks | Java   | Spring R2DBC          | 6.1.10    |  505.2.0  | 1.0.0.RC1  | [Usage Guide](./SpringR2DBC/6.1.x/README.md)      |
