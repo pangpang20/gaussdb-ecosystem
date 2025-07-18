@@ -1,4 +1,4 @@
-# 数据库驱动程序 GaussDB
+# DBeaver GaussDB使用指南
 
 ## 1 概述
 本指南提供了有关如何在 DBeaver 中设置和使用 GaussDB 的说明。
