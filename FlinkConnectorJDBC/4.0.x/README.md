@@ -1,11 +1,5 @@
 ‌[Apache Flink ‌](https://flink.apache.org/) 是一个开源的分布式流处理框架，专为大规模数据处理设计，支持流处理和批处理一体化。它能够在无界和有界数据流上进行有状态计算，具有高吞吐量、低延迟的特性，广泛应用于实时数据处理场景。
-本文档主要介绍 [Flink-connector-jdbc-gaussdb](https://github.com/HuaweiCloudDeveloper/gaussdb-flink-connector-jdbc) 的使用。[Flink-connector-jdbc-gaussdb](https://github.com/HuaweiCloudDeveloper/gaussdb-flink-connector-jdbc)是一个开源的GaussDB连接器，专为Flink写入数据(sink)到GaussDB场景下使用。
-
-**核心特性：**
-1. 新增数据：对应insert功能, 新增增量数据。
-2. 更新数据：对应update功能, 更新存量数据。
-3. ‌删除数据：对应delete功能, 删除存量数据。
-4. 合并数据：对应upsert功能, 根据主键判断目标数据库(GaussDB)是否已存在增量数据，不存在则新增(insert)，存在则更新(update)。
+本文档主要介绍 [Flink-connector-jdbc-gaussdb](https://github.com/HuaweiCloudDeveloper/gaussdb-flink-connector-jdbc) 的使用。
 
 ## 前置条件
 本项目提供的连接器使用前需预先安装 Flink集群及其相关运行环境，并下载对应jar包放置Flink集群各节点的Flink 安装目录 ~/lib 下。
@@ -14,12 +8,6 @@
 [**GaussDB驱动**](https://repo1.maven.org/maven2/com/huaweicloud/gaussdb/gaussdbjdbc/506.0.0.b058-jdk7/gaussdbjdbc-506.0.0.b058-jdk7.jar)
 [**flink-connector-jdbc-gaussdb**](https://repo.maven.apache.org/maven2/com/huaweicloud/gaussdb/flink/flink-connector-jdbc-gaussdb/4.0.0-2.0/)
 [**flink-connector-jdbc-core**](https://repo1.maven.org/maven2/org/apache/flink/flink-connector-jdbc-core/4.0.0-2.0/)
-
-
-> **系统要求如下：**
-> - CPU: 2GHz 或更高
-> - RAM: 4GB 或更大
-> - Disk: 至少 40GB
 
 ## 使用说明
 

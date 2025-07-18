@@ -48,8 +48,8 @@ This project aggregates comprehensive information about the GaussDB open-source 
 | Database Tools | ETL | Apache Camel             |           |  |            |                                            |
 | Database Tools | ETL | Kettle             |           |  |            |                                            |
 | Database Tools | ETL | Airflow             |           |  |            |                                            |
-| Database Tools | ETL | Flink(JDBC Connector) | 3.3.0     | 505.2.0  | 506.0.0    | [Usage Guide](FlinkConnectorJDBC/3.3.x/README.md) |
-| Database Tools | ETL | Flink(JDBC Connector) | 4.0.0     | 505.2.0  | 506.0.0    | [Usage Guide](FlinkConnectorJDBC/4.0.x/README.md) |
+| Database Tools | ETL | Flink(JDBC Connector) | 3.3.0     | 505.2.0  | 506.0.0    | [Usage Guide](FlinkConnectorJDBC/3.3.x/README_en.md) |
+| Database Tools | ETL | Flink(JDBC Connector) | 4.0.0     | 505.2.0  | 506.0.0    | [Usage Guide](FlinkConnectorJDBC/4.0.x/README_en.md) |
 | Database Tools | ETL | Flink(CDC)           |           | 505.2.0  | 506.0.0    |                                            |
 | Middleware | Distributed Tasks | XXL-Job           |           | 505.2.0  | 506.0.0    |                                            |
 | Middleware | Distributed Tasks | DolphinScheduler          |           | 505.2.0  | 506.0.0    |                                            |
