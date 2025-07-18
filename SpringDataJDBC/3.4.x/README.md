@@ -184,7 +184,7 @@ Spring Data JDBC未包含GaussDB的Dialect，需要引入依赖：
 
 * 建表
 
-  参考[建表脚本](https://github.com/HuaweiCloudDeveloper/gaussdb-examples/tree/SpringDataJDBC/3.5.x/authentication-server/src/main/resources/sql/user.sql)，可以使用DBeaver等数据库工具连接，并执行相关SQL语句。
+  参考[建表脚本](https://github.com/HuaweiCloudDeveloper/gaussdb-examples/tree/SpringDataJDBC/3.4.x/authentication-server/src/main/resources/sql/user.sql)，可以使用DBeaver等数据库工具连接，并执行相关SQL语句。
 
 * 启动运行
 
