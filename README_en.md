@@ -26,7 +26,7 @@ This project aggregates comprehensive information about the GaussDB open-source 
 | ORM Frameworks | Java   | Spring Data JDBC     | 3.4.5 |  505.2.0  | 506.0.0    | [Usage Guide](./SpringDataJDBC/3.4.x/README_en.md)   |
 | ORM Frameworks | Java   | Spring Data R2DBC    | 3.5.1 |  505.2.0  | 1.0.0.RC1  | [Usage Guide](./SpringDataR2DBC/3.5.x/README_en.md)  |
 | ORM Frameworks | Java   | Spring Data R2DBC    | 3.4.5 |  505.2.0  | 1.0.0.RC1  | [Usage Guide](./SpringDataR2DBC/3.4.x/README_en.md)  |
-| ORM Frameworks | Go   | GORM     | v1.30.0   |  505.2.0  | v1.0.0-rc1 | [Usage Guide](./GORM/v1.30.0/README.md)           |
+| ORM Frameworks | Go   | GORM     | v1.30.0   |  505.2.0  | v1.0.0-rc1 | [Usage Guide](./GORM/v1.30.0/README_en.md)           |
 | ORM Frameworks | Go   | Ent     |           |    |            |                                            |
 | ORM Frameworks | .Net   | Entity Framework Core    |           |    |            |                                            |
 | ORM Frameworks | .Net   | Nhibernate     |           |    |            |                                            |
