@@ -2,24 +2,9 @@
 
 GORM 是一个流行的 Go 语言 ORM（Object Relational Mapping）库，它使得 Go 开发者可以更便捷地操作数据库。通过结构体和方法调用来代替原始 SQL 语句，提升了开发效率和代码可维护性。
 
-GORM 的使用方法可以参考官方文档：https://gorm.io/zh_CN/docs/  
-本文主要提供在GROM里使用GaussDB的方式。
+GORM 的使用方法可以参考官方文档：[https://gorm.io/zh_CN/docs/](https://gorm.io/zh_CN/docs/)
 
-**核心特性：**
-1. 全功能 ORM
-2. 关联 (Has One，Has Many，Belongs To，Many To Many，多态，单表继承)
-3. Create，Save，Update，Delete，Find 中钩子方法
-4. 支持 Preload、Joins 的预加载
-5. 事务，嵌套事务，Save Point，Rollback To Saved Point
-6. Context、预编译模式、DryRun 模式
-7. 批量插入，FindInBatches，Find/Create with Map，使用 SQL 表达式、Context Valuer 进行 CRUD
-8. SQL 构建器，Upsert，数据库锁，Optimizer/Index/Comment Hint，命名参数，子查询
-9. 复合主键，索引，约束
-10. Auto Migration
-11. 自定义 Logger
-12. 灵活的可扩展插件 API：Database Resolver（多数据库，读写分离）、Prometheus…
-13. 每个特性都经过了测试的重重考验
-14. 开发者友好
+本文主要提供在GROM里使用GaussDB的方式。
 
 ## 动手实践
 ### docker安装OpenGauss
