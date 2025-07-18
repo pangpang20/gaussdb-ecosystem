@@ -16,16 +16,16 @@ This project aggregates comprehensive information about the GaussDB open-source 
 | ORM Frameworks | Java   | MyBatis              | 3.5.14    |  505.2.0  | 506.0.0    | [Usage Guide](./MyBatis/3.5.x/README_en.md)          |
 | ORM Frameworks | Java   | MyBatis-Plus         | 3.5.12    |  505.2.0  | 506.0.0    | [Usage Guide](./MyBatis-Plus/3.5.x/README_en.md)     |
 | ORM Frameworks | Java   | MyBatis-PageHelper   |           |  |            |                                            |
-| ORM Frameworks | Java   | Spring JDBC          | 6.1.10    |  505.2.0  | 506.0.0    | [Usage Guide](./SpringJDBC/6.1.x/README.md)       |
-| ORM Frameworks | Java   | Spring R2DBC         | 6.1.10    |  505.2.0  | 1.0.0.RC1  | [Usage Guide](./SpringR2DBC/6.1.x/README.md)      |
+| ORM Frameworks | Java   | Spring JDBC          | 6.1.10    |  505.2.0  | 506.0.0    | [Usage Guide](./SpringJDBC/6.1.x/README_en.md)       |
+| ORM Frameworks | Java   | Spring R2DBC         | 6.1.10    |  505.2.0  | 1.0.0.RC1  | [Usage Guide](./SpringR2DBC/6.1.x/README_en.md)      |
 | ORM Frameworks | Java   | Spring Data JPA      | 3.4.5     |  505.2.0  | 506.0.0    | [Usage Guide](./SpringDataJPA/3.4.x/README.md)    |
 | ORM Frameworks | Java   | Spring Data JPA      | 3.3.12    |  505.2.0  | 506.0.0    | [Usage Guide](./SpringDataJPA/3.3.x/README.md)    |
 | ORM Frameworks | Java   | Hibernate            | 7.0.0     |  505.2.0  | 506.0.0    | [Usage Guide](./Hibernate/7.0.x/README.md)        |
 | ORM Frameworks | Java   | Hibernate            | 6.6.15    |  505.2.0  | 506.0.0    | [Usage Guide](./Hibernate/6.6.x/README.md)        |
-| ORM Frameworks | Java   | Spring Data JDBC     | 3.5.1 |  505.2.0  | 506.0.0    | [Usage Guide](./SpringDataJDBC/3.5.x/README.md)   |
-| ORM Frameworks | Java   | Spring Data JDBC     | 3.4.5 |  505.2.0  | 506.0.0    | [Usage Guide](./SpringDataJDBC/3.4.x/README.md)   |
-| ORM Frameworks | Java   | Spring Data R2DBC    | 3.5.1 |  505.2.0  | 1.0.0.RC1  | [Usage Guide](./SpringDataR2DBC/3.5.x/README.md)  |
-| ORM Frameworks | Java   | Spring Data R2DBC    | 3.4.5 |  505.2.0  | 1.0.0.RC1  | [Usage Guide](./SpringDataR2DBC/3.4.x/README.md)  |
+| ORM Frameworks | Java   | Spring Data JDBC     | 3.5.1 |  505.2.0  | 506.0.0    | [Usage Guide](./SpringDataJDBC/3.5.x/README_en.md)   |
+| ORM Frameworks | Java   | Spring Data JDBC     | 3.4.5 |  505.2.0  | 506.0.0    | [Usage Guide](./SpringDataJDBC/3.4.x/README_en.md)   |
+| ORM Frameworks | Java   | Spring Data R2DBC    | 3.5.1 |  505.2.0  | 1.0.0.RC1  | [Usage Guide](./SpringDataR2DBC/3.5.x/README_en.md)  |
+| ORM Frameworks | Java   | Spring Data R2DBC    | 3.4.5 |  505.2.0  | 1.0.0.RC1  | [Usage Guide](./SpringDataR2DBC/3.4.x/README_en.md)  |
 | ORM Frameworks | Go   | GORM     | v1.30.0   |  505.2.0  | v1.0.0-rc1 | [Usage Guide](./GORM/v1.30.0/README.md)           |
 | ORM Frameworks | Go   | Ent     |           |    |            |                                            |
 | ORM Frameworks | .Net   | Entity Framework Core    |           |    |            |                                            |
