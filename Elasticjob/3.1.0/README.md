@@ -6,6 +6,9 @@ ElasticJob 是一款分布式任务调度框架，支持分片、弹性扩缩容
 
 本文主要提供ElasticJob连接GaussDB相关的简单使用指南。
 
+### 适配功能点
+ElasticJob 提供基于数据库的事件追踪功能，记录作业执行日志、异常日志等。
+
 ### JDBC驱动
 
 连接GaussDB，推荐使用官方驱动。
@@ -74,4 +77,4 @@ public class SpringBootSimpleJob implements SimpleJob {
 
 ### 运行建表语句
 在运行job时，elasticjob源码会自动创建
-* 默认兼容模式sql：
+* 默认兼容模式sql：https://github.com/apache/shardingsphere-elasticjob/blob/master/ecosystem/tracing/rdb/src/main/resources/META-INF/sql/GaussDB.properties
