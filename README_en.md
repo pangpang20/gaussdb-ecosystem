@@ -53,7 +53,7 @@ This project aggregates comprehensive information about the GaussDB open-source 
 | Database Tools | ETL | Flink(CDC)           |           | 505.2.0  | 506.0.0    |                                            |
 | Middleware | Distributed Tasks | XXL-Job           |           | 505.2.0  | 506.0.0    |                                            |
 | Middleware | Distributed Tasks | DolphinScheduler          |           | 505.2.0  | 506.0.0    |                                            |
-| Middleware | Distributed Tasks | ElasticJob          |           | 505.2.0  | 506.0.0    |                                            |
+| Middleware | Distributed Tasks | ElasticJob          | 3.1.0 | 505.2.0  | 506.0.0    | [Usage Guide](Elasticjob/3.1.0/README_en.md) |
 | Middleware | Configuration Registries | Nacos            |           | 505.2.0  | 506.0.0    |                                            |
 | Middleware | Configuration Registries | Apollo            |           | 505.2.0  | 506.0.0    |                                            |
 | Middleware | Metadata Management | OpenMetadata           |           | 505.2.0  | 506.0.0    |                                            |
