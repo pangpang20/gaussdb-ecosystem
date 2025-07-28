@@ -1,36 +1,35 @@
-# ElasticJob使用GaussDB使用指南
+# GaussDB Usage Guide for ElasticJob #
 
-ElasticJob 是一款分布式任务调度框架，支持分片、弹性扩缩容和故障转移，轻松应对海量任务调度。
+ElasticJob is a distributed task scheduling framework. It supports sharding, elastic scaling, and failover, facilitating massive task scheduling.
 
-官方开发指南参考：[https://shardingsphere.apache.org/elasticjob/current/cn/overview/](https://shardingsphere.apache.org/elasticjob/current/cn/overview/)
+Official development guide Reference: [https://shardingsphere.apache.org/elasticjob/current/cn/overview/](https://shardingsphere.apache.org/elasticjob/current/cn/overview/)
 
-ElasticJob 提供基于数据库的事件追踪功能，记录作业执行日志、异常日志等。本文主要介绍ElasticJob的简单开发，以及如何将GaussDB作为ElasticJob事件追踪数据库。
+ElasticJob provides the database-based event tracing function and records job execution logs and exception logs. This document describes how to develop ElasticJob and how to use GaussDB as the ElasticJob event tracing database.
 
-## ElasticJob开发指导
+## ElasticJob development guideline ##
 
-### 引入JDBC驱动
+### Introduce the JDBC driver. ###
 
-连接GaussDB，推荐使用官方驱动。
+Connect to GaussDB. You are advised to use the official driver.
 
-* 连接串：`jdbc:gaussdb://host:port/database`
+ *  Connection string:`jdbc:gaussdb://host:port/database`
+ *  Driver name:`com.huawei.gaussdb.jdbc.Driver`
+ *  maven
+    
+    ```
+    <dependency>
+        <groupId>com.huaweicloud.gaussdb</groupId>
+        <artifactId>gaussdbjdbc</artifactId>
+        <version>506.0.0.b058</version>
+    </dependency>
+    ```
 
-* Driver名称：`com.huawei.gaussdb.jdbc.Driver`
+### Importing the ElasticJob Dependency ###
 
-* maven
+Version 3.1.0 or later is used.
 
-  ```xml
-  <dependency>
-      <groupId>com.huaweicloud.gaussdb</groupId>
-      <artifactId>gaussdbjdbc</artifactId>
-      <version>506.0.0.b058</version>
-  </dependency>
-  ```
-
-### 引入ElasticJob依赖
-
-使用3.1.0以上的版本
-```xml
-  <dependency>
+```
+<dependency>
    <groupId>org.apache.shardingsphere.elasticjob</groupId>
    <artifactId>elasticjob-spring-boot-starter</artifactId>
    <version>3.1.0-SNAPSHOT</version>
@@ -41,11 +40,11 @@ ElasticJob 提供基于数据库的事件追踪功能，记录作业执行日志
    <artifactId>elasticjob-spring-boot-starter</artifactId>
    <version>3.1.0-SNAPSHOT</version>
   </dependency>
-  ```
+```
 
-### 配置 application.properties
+### Configuring the application.properties file ###
 
-```xml
+```
 elasticjob.tracing.type=RDB
 elasticjob.tracing.datasource.url=jdbc:gaussdb://localhost:8000/hibernate_orm_test?currentSchema=test&preparedStatementCacheQueries=0&batchMode=off
 elasticjob.tracing.datasource.driver-class-name=com.huawei.gaussdb.jdbc.Driver
@@ -61,9 +60,9 @@ elasticjob.jobs.simpleJob.shardingTotalCount=3
 elasticjob.jobs.simpleJob.shardingItemParameters=0=Beijing,1=Shanghai,2=Guangzhou
 ```
 
-### 开发Job
+### Development Job ###
 
-```java
+```
 @Component
 public class SpringBootSimpleJob implements SimpleJob {
 
