@@ -1,6 +1,6 @@
 # Camel连接GaussDB使用指南
 
-Apache Camel 是一款优秀的数据集成开发框架。
+Apache Camel 是一款优秀的系统集成开发框架。
 
 官方开发指南参考：[https://camel.apache.org/](https://camel.apache.org/)
 
