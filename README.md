@@ -45,7 +45,7 @@
 | 数据库工具 | 监控运维 | Apache SkyWalking              |           |  |            |                                            |
 | 数据库工具 | ETL | Addx                           | 6.0.2     | 505.2.0  | 506.0.0    | [使用指南](Addx/README.md) |
 | 数据库工具 | ETL | DataX                          | 4.0.0     | 505.2.0  | 506.0.0    | [使用指南](DataX/README.md) |
-| 数据库工具 | ETL | Apache Camel                   |           |  |            |                                            |
+| 数据库工具 | ETL | Apache Camel|    4.13.0       |505.2.0|506.0.0|[使用指南](Camel/4.13.x/README.md) |
 | 数据库工具 | ETL | Kettle                         |           |  |            |                                            |
 | 数据库工具 | ETL | Airflow                        |           |  |            |                                            |
 | 数据库工具 | ETL | Flink(JDBC Connector)          | 3.3.0     | 505.2.0  | 506.0.0    | [使用指南](FlinkConnectorJDBC/3.3.x/README.md) |

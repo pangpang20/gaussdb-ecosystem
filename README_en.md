@@ -45,7 +45,7 @@ This project aggregates comprehensive information about the GaussDB open-source 
 | Database Tools | Monitoring & Operations | Apache SkyWalking              |           |  |            |                                            |
 | Database Tools | ETL | Addx              |6.0.2     | 505.2.0  | 506.0.0    | [Usage Guide](Addx/README_en.md)|                                            |
 | Database Tools | ETL | DataX             |4.0.0 | 505.2.0  | 506.0.0    | [Usage Guide](DataX/README_en.md)|                                            |
-| Database Tools | ETL | Apache Camel             |           |  |            |                                            |
+| Database Tools | ETL | Apache Camel|    4.13.0       |505.2.0|506.0.0|[Usage Guide](Camel/4.13.x/README_en.md) |
 | Database Tools | ETL | Kettle             |           |  |            |                                            |
 | Database Tools | ETL | Airflow             |           |  |            |                                            |
 | Database Tools | ETL | Flink(JDBC Connector) | 3.3.0     | 505.2.0  | 506.0.0    | [Usage Guide](FlinkConnectorJDBC/3.3.x/README_en.md) |
