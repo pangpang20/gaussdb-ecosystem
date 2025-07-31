@@ -1,6 +1,6 @@
 # Guide to Connecting Camel to GaussDB #
 
-Apache Camel is an excellent data integration development framework.
+Apache Camel is an excellent integration framework.
 
 Official development guide Reference: [https://camel.apache.org/](https://camel.apache.org/)
 
