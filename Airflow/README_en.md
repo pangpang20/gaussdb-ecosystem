@@ -11,9 +11,11 @@ Apache Airflow®是一个提供基于DAG有向无环图来编排工作流的、�
 
 ### 主要由3大部分组成:
 1. Python 环境及依赖包安装。
-    * Huawei Cloud EulerOS 2.0 64bit 自带 Python 3.9.9 开发环境
+
 <details>
 <summary>点击展开</summary>
+
+* Huawei Cloud EulerOS 2.0 64bit 自带 Python 3.9.9 开发环境
 
 * 安装Python以libpq方式链接GaussDB的相关依赖包
 ```shell
@@ -106,9 +108,11 @@ dag_default_view = graph
 # How often (in seconds) to scan the DAGs directory for new files. Default to 5 minutes.
 dag_dir_list_interval = 30
 ```
-</ details>
+</details>
+
 
 * 创建Airflow web UI登录用户
+
 ```shell-airflow
 airflow users create \
 --username airflow \
@@ -116,8 +120,9 @@ airflow users create \
 --lastname airflow \
 --role Admin \
 --email airflow@huawei.com
+* 两次确认登录密码
 ```
--- 两次确认登录密码
+
 
 * Airflow 初始化mysql 数据库
 ```shell-airflow
@@ -137,8 +142,6 @@ mkdir /root/airflow/dags
 * 访问Airflow webui查看DAG
   浏览器访问：http://ip:8080  用户名：airflow 密码：123456
 
-</details>
-
 
 ## 案例分享
 
@@ -151,6 +154,9 @@ mkdir /root/airflow/dags
 * [Python链接GaussDB方式](https://github.com/HuaweiCloudDeveloper/gaussdb-python/tree/master) libpq.so.5.5
 
 * 配置一个同步数据的DAG作业：
+
+<details>
+<summary>点击展开</summary>
 
 ```python
 from datetime import datetime, timedelta
@@ -368,6 +374,7 @@ load_task = PythonOperator(
 # 设置任务依赖
 check_table_task >> extract_task >> load_task
 ```
+</details>
 
 * 将建好的DAG存放在Airflow默认路径(/root/airflow/dags)下会按照Schduler计划到时自动执行作业,作业执行完成可以查看目标表是否正确写入数据。
 
