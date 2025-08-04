@@ -60,10 +60,7 @@ flush privileges;
 
 3. Airflow 安装。
 
-<details>
-<summary>点击展开</summary>
-
-### 以下至【案例分享】前的步骤都需要在 af_env python3 虚拟环境下执行
+##### 以下至【案例分享】前的步骤都需要在 af_env python3 虚拟环境下执行
 
 * 安装相关依赖包  
 ```shell
@@ -78,7 +75,6 @@ PYTHON_VERSION="$(python -c 'import sys; print(f"{sys.version_info.major}.{sys.v
 CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
 pip install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
 ```
-</details>
 
 * 修改必要的部分airflow配置文件 airflow.cfg
 
