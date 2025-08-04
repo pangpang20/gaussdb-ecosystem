@@ -47,7 +47,7 @@
 | 数据库工具 | ETL | Addx                           | 6.0.2     | 505.2.0  | 506.0.0    | [使用指南](Addx/README.md) |
 | 数据库工具 | ETL | DataX                          | 4.0.0     | 505.2.0  | 506.0.0    | [使用指南](DataX/README.md) |
 | 数据库工具 | ETL | Kettle                         |           |  |            |                                            |
-| 数据库工具 | ETL | Airflow                        |           |  |            |                                            |
+| 数据库工具 | ETL | Airflow                        | 2.1       | 505.2.0  | 506.0.0    | [使用指南](Airflow/README.md) |
 | 数据库工具 | ETL | Flink(JDBC Connector)          | 3.3.0     | 505.2.0  | 506.0.0    | [使用指南](FlinkConnectorJDBC/3.3.x/README.md) |
 | 数据库工具 | ETL | Flink(JDBC Connector)          | 4.0.0     | 505.2.0  | 506.0.0    | [使用指南](FlinkConnectorJDBC/4.0.x/README.md) |
 | 数据库工具 | ETL | Flink(CDC)                     |           | 505.2.0  | 506.0.0    |                                            |
