@@ -66,7 +66,6 @@ flush privileges;
 ```shell
 pip install mysql-connector-python
 pip install apache-airflow[mysql]
-pip install apache-airflow-providers-mysql
 ```
 
 * 安装Airflow
