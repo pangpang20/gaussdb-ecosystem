@@ -68,12 +68,18 @@ pip install mysql-connector-python
 pip install apache-airflow[mysql]
 pip install apache-airflow-providers-mysql
 ```
+
 * 安装Airflow
 ```shell
 AIRFLOW_VERSION=2.10.0
 PYTHON_VERSION="$(python -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")')"
 CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
 pip install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
+```
+
+* 创建Airflow DAG的存放目录
+```shell
+mkdir /root/airflow/dags
 ```
 
 * 修改必要的部分airflow配置文件 airflow.cfg
@@ -119,7 +125,6 @@ airflow users create \
 * 两次确认登录密码
 ```
 
-
 * Airflow 初始化mysql 数据库
 ```shell-airflow
 airflow db init
@@ -129,10 +134,6 @@ airflow db init
 ```shell-airflow 
 airflow webserver --port 8080 -D
 airflow scheduler -D
-```
-* 创建Airflow DAG的存放目录
-```shell
-mkdir /root/airflow/dags
 ```
 
 * 访问Airflow webui查看DAG
@@ -372,6 +373,6 @@ check_table_task >> extract_task >> load_task
 ```
 </details>
 
-* 将建好的DAG存放在Airflow默认路径(/root/airflow/dags)下会按照Schduler计划到时自动执行作业,作业执行完成可以查看目标表是否正确写入数据。
+* 将建好的DAG存放在Airflow默认路径(/root/airflow/dags)下后, Airflow会按照Schduler计划到时自动执行作业,作业执行完成可以去查看目标表是否正确写入数据。
 
 
