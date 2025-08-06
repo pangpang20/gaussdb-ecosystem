@@ -157,4 +157,4 @@ CREATE DATABASE databasename DBCOMPATIBILITY '模式名';
 
 CREATE DATABASE mysql_compatible_db DBCOMPATIBILITY 'M'; 
 
-关于M兼容模式的更多信息，请参考[《M-Compatibility开发者指南》](https://support.huawei.com/enterprise/zh/doc/EDOC1100458571/16932372)。
+关于M兼容模式的更多信息，请参考[《M-Compatibility开发者指南》](https://doc.hcs.huawei.com/db/zh-cn/gaussdbqlh/24.1.30/devg-cent/gaussdb-42-9003.html)。
