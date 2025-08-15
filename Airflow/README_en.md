@@ -119,7 +119,7 @@ mkdir /root/airflow/dags
 ```
 
 * 访问Airflow webui查看DAG
-  浏览器访问：http://ip:8080 </ br>  
+  浏览器访问：http://ip:8080  
   用户名/密码 保存在自动生成的文件 [simple_auth_manager_passwords.json.generated] 内
 
 
