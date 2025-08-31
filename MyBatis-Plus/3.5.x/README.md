@@ -42,7 +42,7 @@ MyBatis-Plus 是一个 MyBatis 的增强工具，在 MyBatis 的基础上只做�
             <artifactId>spring-boot-starter-logging</artifactId>
           </exclusion>
         </exclusions>
-        <version>3.5.12</version>
+        <version>3.5.13</version>
       </dependency
     ```
 
