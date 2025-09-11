@@ -40,7 +40,7 @@ If the application uses Spring Boot, MyBatis-Plus Spring Boot Starter is recomme
             <artifactId>spring-boot-starter-logging</artifactId>
           </exclusion>
         </exclusions>
-        <version>3.5.12</version>
+        <version>3.5.13</version>
       </dependency
     ```
 
