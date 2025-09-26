@@ -66,15 +66,14 @@ flush privileges;
 ```shell
 yum install mysql-devel python3-devel gcc
 pip install mysql-connector-python
-pip install apache-airflow[mysql]
 ```
 
 * 安装Airflow
 ```shell
-AIRFLOW_VERSION=2.10.0
+AIRFLOW_VERSION=3.0.4
 PYTHON_VERSION="$(python -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")')"
 CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
-pip install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
+pip install "apache-airflow[mysql]==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
 ```
 
 * 修改必要的部分airflow配置文件 airflow.cfg
