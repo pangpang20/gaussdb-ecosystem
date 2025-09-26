@@ -56,7 +56,7 @@
 | 中间件 | 分布式任务 | ElasticJob            | 3.1.0     | 505.2.0  | 506.0.0    | [使用指南](Elasticjob/3.1.0/README.md)                  |
 | 中间件 | 注册配置中心 | Nacos                 |           | 505.2.0  | 506.0.0    |                                                     |
 | 中间件 | 注册配置中心 | Apollo                |           | 505.2.0  | 506.0.0    |                                                     |
-| 中间件 | 元数据管理  | OpenMetadata          | 1.7.0     | 505.2.0  | 506.0.0    | [使用指南](OpenMetadata/README.md)                     |
+| 中间件 | 元数据管理  | OpenMetadata          |      | 505.2.0  | 506.0.0    |                      |
 
 * 可以通过 `select version()` 查询GaussDB版本信息。
 * 可以参考 [gaussdb-drivers](https://github.com/HuaweiCloudDeveloper/gaussdb-drivers) 进一步了解驱动信息。
